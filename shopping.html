@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbfarm SHOPPING</title>
+
+<script>
+               let data = [["./images/potato1.png", "[가빈농장] 못난이 감자", 15000, 150, "무료배송"],
+                    ["./images/peach1.png", "[채원농장] 딱딱이 복숭아", 20000, 200, "무료배송"],
+                    ["./images/rice.jpg", "[은지농장] 대감집 햅쌀", 30000, 300, "무료배송"]]
+
+               function tablePrint(){
+            
+            let text = '';
+            text = `<table class="w3-table-all w3-hoverable"><tr class="w3-green"><th>이미지</th><th>오늘의 핫딜 상품</th><th></th><th>판매가</th><th></th><th>적립금</th><th>배송비</th></tr>`;
+            for(let i =0 ; i< data.length; i++){
+                text+=`<tr><td><img src=${data[i][0]}></td><td>${data[i][1]}</td><td></td><td>${data[i][2]}</td><td></td><td>${data[i][3]}</td><td>${data[i][4]}</td></tr>`;
+            }  
+            text += `</table>`;
+              document.getElementById("productList").innerHTML=text;
+           }
+           function fileUpload(){
+               let a = new Array();
+               let file = "./images/" + document.getElementById("file").files[0].name;
+               let info = document.getElementById("info").value;
+               let price = document.getElementById("price").value;
+               let point = parseInt(document.getElementById("point").value);
+               let carry = document.getElementById("carry").value;
+               a[0] = file;
+               a[1] = info;
+               a[2] = price;
+               a[3] = point;
+               a[4] = carry;
+               data.push(a);
+               console.log(data);}
+</script>
+
+<style>
+    body{width: 950px; margin: 0px auto;}
+
+    body>div{
+        color: #4dae50;}
+
+    li{list-style: square;}
+
+</style>
+
+</head>
+
+<body>
+    <div>
+    <h1>장바구니</h1>
+    </div>
+    <hr>
+    <p><i>웰빙팜 고객님 반갑습니다!</i></p>
+    <p>장바구니에서는 원하시는 상품을 저장할 수 있습니다. </p>
+
+</body>
+<body onload="tablePrint();">
+    <section>
+        <div id="demo" class="w3-container">
+            <div  class="w3-margin-bottom" id="productList">
+
+            </div>
+            </table>
+        </div>
+
+        <div class="w3-container">
+            <h3 class="w3-margin-top">[장바구니 리스트]</h3>
+            <div class="w3-small">
+            이미지 : <input class="w3-input" type="file" name="" id="file"> <br>
+            상품 정보 : <input class="w3-input" type="text" name="" id="info"> <br>
+            가격 : <input class="w3-input" type="text" name="" id="price"> <br>
+            적립금 : <input class="w3-input" type="text" name="" id="point"> <br>
+            배송비 : <input class="w3-input" type="text" name="" id="carry"> <br>
+        </div>
+            <button class= "w3-button w3-green w3-round" onclick="fileUpload();">등록</button>
+            <button class= "w3-button w3-green w3-round" onclick="tablePrint();">리스트 추가</button>
+      </div>
+    </section>
+</body>
+&copy; WBfarm<br/>
+</html>
