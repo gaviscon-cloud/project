@@ -1,99 +1,349 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<title>Well-being Farm</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style>
-	body{
-		width: 1320px;
-		margin: 0px auto;
-	}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbfarm</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script>
+        
+        function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       document.getElementById("login").innerHTML="<h2>" +
+                          "alert으로 로그인이 되었습니다. </h2>"; 
+                   } else {
+                       alert("비밀번호를 확인해주세요!");
+                   }
+               }else{
+                   alert("회원가입을 부탁드립니다!");
+               }
+           }
+
+           let data = [["./images/potato1.png", "[가빈농장] 못난이 감자", 15000, 150, "무료배송"],
+                    ["./images/peach1.png", "[채원농장] 딱딱이 복숭아", 20000, 200, "무료배송"],
+                    ["./images/spinich1.png", "[연우농장] 튼튼 시금치", 10000, 100, "무료배송"],
+                    ["./images/tomato1.png", "[선애농장] 멋쟁이 토마토", 10000, 100, "무료배송"],
+                    ["./images/rice.jpg", "[은지농장] 대감집 햅쌀", 30000, 300, "무료배송"]]
+
+           function tablePrint(){
+            
+            let text = '';
+            text = `<table class="w3-table-all w3-hoverable"><tr class="w3-green"><th>이미지</th><th>오늘의 핫딜 상품</th><th></th><th>판매가</th><th></th><th>적립금</th><th>배송비</th></tr>`;
+            for(let i =0 ; i< data.length; i++){
+                text+=`<tr><td><img src=${data[i][0]}></td><td>${data[i][1]}</td><td></td><td>${data[i][2]}</td><td></td><td>${data[i][3]}</td><td>${data[i][4]}</td></tr>`;
+            }  
+            text += `</table>`;
+              document.getElementById("productList").innerHTML=text;
+           }
+           function fileUpload(){
+               let a = new Array();
+               let file = "./images/" + document.getElementById("file").files[0].name;
+               let info = document.getElementById("info").value;
+               let price = document.getElementById("price").value;
+               let point = parseInt(document.getElementById("point").value);
+               let carry = document.getElementById("carry").value;
+               a[0] = file;
+               a[1] = info;
+               a[2] = price;
+               a[3] = point;
+               a[4] = carry;
+               data.push(a);
+               console.log(data);}
+               
+               
+               var person = prompt("이름을 입력해주세요 :", "고객님의 이름은 무언인가요?");
+
+                if(person == null || person == "")
+                {
+                alert("다시 시도해주세요");
+                }else{
+                alert("안녕하세요 " + person + "님! 방문해주셔서 감사합니다");
+                }
+
+                
+
+</script>                
+
+                
+    </script>
+
+    <style>
+        body{width: 950px; margin: 0px auto;}
+
+        
+        .container {
+            display: flex;
+            flex-direction: row;}
+
+
+  
+            *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
+
+
+        header>img{
+            display: block; margin: 0px auto;
+            height: 120px;}
+
+        li{list-style: none;}   
+        ul{list-style: none;} 
+        a{text-decoration: none;}
+
+        header>h1{
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-weight: 600;}
+
+            nav>ul{
+            text-align: center;
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;}
+        
+                
+        nav>ul>div{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;}
+
+        nav>ul>li{
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;}
+
+        nav>ul>li>a:hover{
+            color: white;}
+
+
+        table{border: 2px solid gray;}
+        
+        #id{margin-bottom: 6px;}
+
+        #login>button{
+            display:inline-block;
+            background-color: #4dae50;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 10px 10px;
+            margin: 5px 5px 0px 0px;
+            border: none;
+            cursor: pointer;
+            width: 8%;}
+
+
+        aside>div{
+            margin-top: 42px;
+            font-size: 17px;
+            font-weight: 600;}
+
+    </style>
+
+
+
 </head>
-<body>
-<!-- Save for Web Slices (index1.psd) -->
-<table id="__01" width="1320" height="1301" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td colspan="7">
-			<img src="images/index1_01.jpg" width="1320" height="49" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="2">
-			<img src="images/index1_02.jpg" width="240" height="90" alt=""></td>
-		<td rowspan="2">
-			<a href="sub01/sub01.html" target="_self">
-				<img src="images/menu01.jpg" width="220" height="90" border="0" alt=""></a></td>
-		<td>
-			<a href="./products.html" target="_blank">
-				<img src="images/menu02.jpg" width="220" height="89" border="0" alt=""></a></td>
-		<td colspan="2">
-			<a href="http://www.donga.ac.kr" target="_blank">
-				<img src="images/menu03.jpg" width="220" height="89" border="0" alt=""></a></td>
-		<td>
-			<img src="images/index1_06.jpg" width="220" height="89" alt=""></td>
-		<td>
-			<img src="images/index1_07.gif" width="200" height="89" alt=""></td>
+<body class="w3-margin-top">
+    <header class="w3-container w3-margin-top">
+        <img src="./images/logo.png" alt="">
 
-	</tr>
-	<tr>
-		<td colspan="5" rowspan="2">
-			<img src="images/index1_08.jpg" width="860" height="231" alt=""></td>
+    </header>
+    <nav>
+        <ul class="w3-bar">
+            <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
+                <button class="w3-button">카테고리 ▼</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">서울</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">제주</a>
+                    </div>
+            </div>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#product"/>이달의 특산물</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#review"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
+        
+    </nav>
+    
+    <section class="w3-left w3-container w3-margin-top w3-margin-bottom" style="width: 70%">
+        <article class="media w3-large  w3-margin-top" ></article>
+            <img width="620" height="220" src="./images/main.gif" alt="MainPhoto">
+        <article class="media w3-large  w3-margin-top w3-text-brown">
+            <div id="hot" class="w3-row">
+                <h3>[오늘의 핫딜]</h3>
+                <img class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
+                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
+                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
+                <img class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
+                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
+                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
+            
+            </div>
+        
+            <h3 id="product" class="w3-margin-top">[이달의 특산물 리스트]</h3>
+            <body onload="tablePrint();">
+                <section>
+                    <div id="demo" class="w3-container">
+                        <div  class="w3-margin-bottom" id="productList">
+            
+                        </div>
+                        </table>
+                    </div>
 
-	</tr>
-	<tr>
-		<td colspan="2">
-			<img src="images/index1_09.gif" width="460" height="230" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="1" height="230" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<video src="./medias/media01.mp4" width="400px" controls></video>
-			<video src="./medias/media02.mp4" width="400px" controls></video>
-		</td>
-		<td colspan="3">
-			<img src="images/index1_11.jpg" width="440" height="270" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="1" height="270" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="7">
-			<img src="images/index1_12.gif" width="1320" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="1" height="1" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<img src="images/index1_13.jpg" width="880" height="490" alt=""></td>
-		<td colspan="3">
-			<img src="images/index1_14.jpg" width="440" height="490" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="1" height="490" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="7">
-			<img src="images/index1_15.jpg" width="1320" height="170" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="1" height="170" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="240" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="220" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="220" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="200" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="20" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="220" height="1" alt=""></td>
-		<td>
-			<img src="images/&#xc2a4;&#xd398;&#xc774;&#xc11c;.gif" width="200" height="1" alt=""></td>
-		<td></td>
-	</tr>
-</table>
-<!-- End Save for Web Slices -->
+                    <div class="w3-container">
+                        <h3 class="w3-margin-top">[이달의 특산물 등록]</h3>
+                        <div class="w3-small">
+                        이미지 : <input class="w3-input" type="file" name="" id="file"> <br>
+                        상품 정보 : <input class="w3-input" type="text" name="" id="info"> <br>
+                        가격 : <input class="w3-input" type="text" name="" id="price"> <br>
+                        적립금 : <input class="w3-input" type="text" name="" id="point"> <br>
+                        배송비 : <input class="w3-input" type="text" name="" id="carry"> <br>
+                    </div>
+                        <button class= "w3-button w3-green w3-round" onclick="fileUpload();">등록</button>
+                        <button class= "w3-button w3-green w3-round" onclick="tablePrint();">리스트 추가</button>
+                  </div>
+                </section>
+            </body>
+            <br>
+            <div id="review" class="w3-row"></div>            
+                <h3 class="w3-margin-top">[이달의 베스트 후기]<img class="w3-col w3-border w3-margin-top w3-margin-bottom" src="./images/review.jpg" alt="review" /></h3>
+            </div>
+
+
+            <div class="w3-row">
+                <h3 id="farm" class="w3-margin-top">[이달의 체험 농가]</h3>
+                <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm.mp4" autoplay="True" controls></video>
+                <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm2.mp4" autoplay="True" controls></video>
+            
+                <table class="w3-table-all w3-hoverable">
+                    <tr class="w3-green">
+                        <th>농가 이름</th>
+                        <th>활동 내용</th>
+                        <th>구분</th>
+                    </tr>
+                    <tr>
+                        <td>BEST! 하늘커피</td>
+                        <td>커피나무 하우스 투어와 가공 과정 체험</td>
+                        <td>단체</td>
+                    </tr>
+                    <tr>
+                        <td>안성팜랜드</td>
+                        <td>젖소 농장 투어와 6차산업 체험</td>
+                        <td>단체</td>
+                    </tr>
+                    <tr>
+                        <td>해피팜 스토리</td>
+                        <td>참나무 원목 표보 재배 체험</td>
+                        <td>개인</td>
+                    </tr>
+                    <tr>
+                        <td>행복한 농장</td>
+                        <td>하우스 딸기 재배 체험</td>
+                        <td>개인</td>
+                </tr>
+                </table>
+                <hr>
+
+            </div>
+            <div class="container w3-row w3-margin-top">
+                <h3 class="item">[농촌진흥청 홍보물]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.youtube.com/embed/jYNrsS61A5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3>
+                <h3 class="item">[농촌진흥청 사이트]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.rda.go.kr/main/mainPage.do"></iframe></h3>
+            </div>
+            <div class="w3-row w3-margin-top">
+            <h3>[배송일 예측하기]</h3>
+            <p>오늘 주문하시면 이 날에 도착합니다!<p id="time"></p>
+            </div>
+
+        </article>
+        </div>
+        
+
+    </section>
+
+    
+
+    <aside class="right w3-margin-top" class="flex-container" >
+    <div id="login">
+        <h3 class="w3-text-brown"> 로그인 </h3>
+        아이디 :
+        <input type="text" name="" id="id" size=12><br>
+        비밀번호 :
+        <input type="password" name="" id="pw" size=11><br>
+        <button class="w3-round" onclick="login();">로그인</button><button class="w3-round" onclick="cancel();">취소</button>
+    </div>
+    <br><br>
+    </aside>
+    <aside class="right w3-margin-top w3-large">
+    <div class="link">
+        <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
+                <a href="shopping.html" target="_blank">
+                    <i class="fas fa-shopping-basket" style="font-size : 30px; color : black"></i>  
+                <a href="https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionality.do?menu_grp=MENU_NEW01&menu_no=2657"target="_blank">
+                    <i class="fa fa-search" style="font-size : 30px; color : black"></i>  
+                <a href="https://www.cjlogistics.com/ko/tool/parcel/tracking"target="_blank">
+                    <i class="fa fa-truck" style="font-size : 30px; color : black"></i>
+        <br><br>
+        <a href="myPage.html" target="_blank">
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">마이 페이지</a><br>
+        <a href="Q&A.html" target="_blank">
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">상품문의</a><br>
+        <a href="notice.html" target="_blank">
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">공지사항</a><br>    
+
+        <a href="https://www.rda.go.kr/subMain/minwonMain.do" target="_blank"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">커뮤니티</a><br><br>
+
+        <aside class="right">
+        <h3 id="event" class="w3-margin-top w3-text-brown">이벤트/쿠폰</h3><img class="w3-margin-bottom" width="250" height="43" src="./images/buy.jpg">
+        <img class="w3-margin-bottom" width="250" height="43" src="./images/farm.jpg">
+        <img class="w3-margin-bottom" width="250" height="43" src="./images/point.jpg">
+        <img class="w3-margin-bottom" width="250" height="43" src="./images/red food.jpg"></aside>
+
+    </div>
+    </aside>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</article>
+
+<br><br><br><br><br><br><br><br><br><br>
+  
+
+
+
+<footer class="w3-green">
+    <div class="w3-row">
+        <div class="s4 w3-container">
+            <div id="contact">
+                <h5>CONTACT Well-Being FARM</h5>
+                <ul>
+                <li>Phone : 055 9211 6591</li>
+                <li>Email : <a href="https://mail.naver.com/write"> gabi0619@naver.com</li>
+                <li>GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud</li>
+                </ul> 
+                <h5>FOLLOW Well-Being FARM</h5> 
+                <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
+                <a href="https://www.instagram.com/gaviscon.kr/"><i class="fab fa-instagram" style="font-size : 30px; color : white"></i> 
+                <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065216954475_creativeid_535244992752_device_c&gclid=CjwKCAjwz5iMBhAEEiwAMEAwGHBSoJKo2p_1F9hdVDnHiB2Gvvww0W1bewOLRHn_pS9MxK-LvvBGxhoCk8gQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-google-play" style="font-size : 30px; color : white"></i> 
+                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> 
+
+            <br /><br />
+                &copy; WBfarm 
+        </div>
+    </div>
+</footer>
+<script>
+
+    const d = new Date();
+    d.setDate(d.getDate() + 3);
+    document.getElementById("time").innerHTML = d;
+    </script>
+    
 </body>
 </html>
+
