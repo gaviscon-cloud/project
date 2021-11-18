@@ -144,7 +144,13 @@
             margin-top: 42px;
             font-size: 17px;
             font-weight: 600;}
-
+        
+        .imghover img{
+            transition: 0.2s linear;
+        }
+        .imghover:hover img{
+            transform: scale(1.2);
+        } 
     </style>
 
 
@@ -177,17 +183,30 @@
     
     <section class="w3-left w3-container w3-margin-top w3-margin-bottom" style="width: 70%">
         <article class="media w3-large  w3-margin-top" ></article>
-            <img width="620" height="220" src="./images/main.gif" alt="MainPhoto">
+        <div class="imghover main">
+            <img style = "cursor: pointer;" width="620" height="220" src="./images/main.gif" alt="MainPhoto">
+        </div>
         <article class="media w3-large  w3-margin-top w3-text-brown">
             <div id="hot" class="w3-row">
                 <h3>[오늘의 핫딜]</h3>
-                <img class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
-                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
-                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
-                <img class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
-                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
-                <img class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
-            
+                <div class="imghover img1">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
+                </div>
+                <div class="imghover img2">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
+                </div>
+                <div class="imghover img3">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
+                </div>
+                <div class="imghover img4">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
+                </div>
+                <div class="imghover img5">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
+                </div>
+                <div class="imghover img6">
+                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
+                </div>
             </div>
         
             <h3 id="product" class="w3-margin-top">[이달의 특산물 리스트]</h3>
@@ -303,7 +322,9 @@
         <a href="https://www.rda.go.kr/subMain/minwonMain.do" target="_blank"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">커뮤니티</a><br><br>
 
         <aside class="right">
-        <h3 id="event" class="w3-margin-top w3-text-brown">이벤트/쿠폰</h3><img class="w3-margin-bottom" width="250" height="43" src="./images/buy.jpg">
+        <h3 id="event" class="w3-margin-top w3-text-brown">이벤트/쿠폰</h3>
+        <div style = "cursor: pointer;" class="imghover banner">
+        <img class="w3-margin-bottom" width="250" height="43" src="./images/buy.jpg">
         <img class="w3-margin-bottom" width="250" height="43" src="./images/farm.jpg">
         <img class="w3-margin-bottom" width="250" height="43" src="./images/point.jpg">
         <img class="w3-margin-bottom" width="250" height="43" src="./images/red food.jpg"></aside>
