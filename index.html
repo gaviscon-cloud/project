@@ -70,6 +70,13 @@
             window.open("event.html", "event wbfarm", "width=450, height=450, scrollbars=yes, left=100, top=50");
     }  
                 
+    function displayDate()
+    {
+    const d = new Date();
+    d.setDate(d.getDate() + 3);
+    document.getElementById("time").innerHTML = d;
+    
+    }
 
 </script>                
 
@@ -279,8 +286,10 @@
                 <h3 class="item">[농촌진흥청 사이트]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.rda.go.kr/main/mainPage.do"></iframe></h3>
             </div>
             <div class="w3-row w3-margin-top">
-            <h3>[배송일 예측하기]</h3>
-            <p>오늘 주문하시면 이 날에 도착합니다!<p id="time"></p>
+                <h3>[배송일 예측하기]</h3>
+                <p>오늘 주문하시면 이 날에 도착합니다!</p>
+                <button onclick="displayDate()">예측 배송일자 확인하기</button>
+                <p id="time"></p>
             </div>
 
         </article>
@@ -361,12 +370,7 @@
         </div>
     </div>
 </footer>
-<script>
 
-    const d = new Date();
-    d.setDate(d.getDate() + 3);
-    document.getElementById("time").innerHTML = d;
-    </script>
     
 </body>
 </html>
