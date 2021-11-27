@@ -25,36 +25,6 @@
                }
            }
 
-           let data = [["./images/potato1.png", "[가빈농장] 못난이 감자", 15000, 150, "무료배송"],
-                    ["./images/peach1.png", "[채원농장] 딱딱이 복숭아", 20000, 200, "무료배송"],
-                    ["./images/spinich1.png", "[연우농장] 튼튼 시금치", 10000, 100, "무료배송"],
-                    ["./images/tomato1.png", "[선애농장] 멋쟁이 토마토", 10000, 100, "무료배송"],
-                    ["./images/rice.jpg", "[은지농장] 대감집 햅쌀", 30000, 300, "무료배송"]]
-
-           function tablePrint(){
-            
-            let text = '';
-            text = `<table class="w3-table-all w3-hoverable"><tr class="w3-green"><th>이미지</th><th>오늘의 핫딜 상품</th><th></th><th>판매가</th><th></th><th>적립금</th><th>배송비</th></tr>`;
-            for(let i =0 ; i< data.length; i++){
-                text+=`<tr><td><img src=${data[i][0]}></td><td>${data[i][1]}</td><td></td><td>${data[i][2]}</td><td></td><td>${data[i][3]}</td><td>${data[i][4]}</td></tr>`;
-            }  
-            text += `</table>`;
-              document.getElementById("productList").innerHTML=text;
-           }
-           function fileUpload(){
-               let a = new Array();
-               let file = "./images/" + document.getElementById("file").files[0].name;
-               let info = document.getElementById("info").value;
-               let price = document.getElementById("price").value;
-               let point = parseInt(document.getElementById("point").value);
-               let carry = document.getElementById("carry").value;
-               a[0] = file;
-               a[1] = info;
-               a[2] = price;
-               a[3] = point;
-               a[4] = carry;
-               data.push(a);
-               console.log(data);}
                
                
                var person = prompt("이름을 입력해주세요 :", "고객님의 이름은 무언인가요?");
@@ -96,13 +66,15 @@
             *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
 
 
-        header>img{
+        header>a>img{
             display: block; margin: 0px auto;
             height: 120px;}
 
         li{list-style: none;}   
         ul{list-style: none;} 
         a{text-decoration: none;}
+        
+
 
         header>h1{
             text-align: center;
@@ -128,6 +100,33 @@
 
         nav>ul>li>a:hover{
             color: white;}
+    
+        article>div{
+        font-weight: 600;
+        } 
+        
+
+        article>h3{
+            text-align: center;
+            font-weight: 600;
+        }    
+        article>div>h3{
+            text-align: center;
+            font-weight: 600;
+        } 
+
+        aside>h3{
+        font-weight: 600;
+        } 
+
+        aside>div>h3{
+        font-weight: 600;
+        } 
+
+
+
+        footer{font-weight: 600;}
+
 
 
         table{border: 2px solid gray;}
@@ -156,7 +155,7 @@
             transition: 0.2s linear;
         }
         .imghover:hover img{
-            transform: scale(1.2);
+            transform: scale(1.1);
         } 
     </style>
 
@@ -165,7 +164,7 @@
 </head>
 <body class="w3-margin-top"  onload="tablePrint(); popup();">
     <header class="w3-container w3-margin-top">
-        <img src="./images/logo.png" alt="">
+        <a href="index.html"><img src="./images/logo.png" alt=""></a>
 
     </header>
     <nav>
@@ -181,7 +180,7 @@
                     <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">제주</a>
                     </div>
             </div>
-            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#product"/>이달의 특산물</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#review"/>이달의 레시피</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
@@ -194,29 +193,28 @@
             <img style = "cursor: pointer;" width="620" height="220" src="./images/main.gif" alt="MainPhoto">
         </div>
         <article class="media w3-large  w3-margin-top w3-text-brown">
-            <div id="hot" class="w3-row">
+            <div id="hot" class="w3-row"><br>
                 <h3>[오늘의 핫딜]</h3>
                 <div class="imghover img1">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
                 </div>
                 <div class="imghover img2">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
                 </div>
                 <div class="imghover img3">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
                 </div>
                 <div class="imghover img4">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
                 </div>
                 <div class="imghover img5">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
                 </div>
                 <div class="imghover img6">
-                <img style = "cursor: pointer;" class="w3-col s3 w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
+                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
                 </div>
             </div>
         
-            <h3 id="product" class="w3-margin-top">[이달의 특산물 리스트]</h3>
             <body onload="tablePrint();">
                 <section>
                     <div id="demo" class="w3-container">
@@ -226,27 +224,14 @@
                         </table>
                     </div>
 
-                    <div class="w3-container">
-                        <h3 class="w3-margin-top">[이달의 특산물 등록]</h3>
-                        <div class="w3-small">
-                        이미지 : <input class="w3-input" type="file" name="" id="file"> <br>
-                        상품 정보 : <input class="w3-input" type="text" name="" id="info"> <br>
-                        가격 : <input class="w3-input" type="text" name="" id="price"> <br>
-                        적립금 : <input class="w3-input" type="text" name="" id="point"> <br>
-                        배송비 : <input class="w3-input" type="text" name="" id="carry"> <br>
-                    </div>
-                        <button class= "w3-button w3-green w3-round" onclick="fileUpload();">등록</button>
-                        <button class= "w3-button w3-green w3-round" onclick="tablePrint();">리스트 추가</button>
-                  </div>
                 </section>
             </body>
-            <br>
             <div id="review" class="w3-row"></div>            
                 <h3 class="w3-margin-top">[이달의 베스트 후기]<img class="w3-col w3-border w3-margin-top w3-margin-bottom" src="./images/review.jpg" alt="review" /></h3>
             </div>
 
 
-            <div class="w3-row">
+            <div class="w3-row"><br>
                 <h3 id="farm" class="w3-margin-top">[이달의 체험 농가]</h3>
                 <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm.mp4" autoplay="True" controls></video>
                 <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm2.mp4" autoplay="True" controls></video>
@@ -285,7 +270,7 @@
                 <h3 class="item">[농촌진흥청 홍보물]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.youtube.com/embed/jYNrsS61A5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3>
                 <h3 class="item">[농촌진흥청 사이트]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.rda.go.kr/main/mainPage.do"></iframe></h3>
             </div>
-            <div class="w3-row w3-margin-top">
+            <div class="w3-row w3-margin-top"><br>
                 <h3>[배송일 예측하기]</h3>
                 <p>오늘 주문하시면 이 날에 도착합니다!</p>
                 <button onclick="displayDate()">예측 배송일자 확인하기</button>
@@ -303,11 +288,12 @@
     <aside class="right w3-margin-top" class="flex-container" >
     <div id="login">
         <h3 class="w3-text-brown"> 로그인 </h3>
-        아이디 :
-        <input type="text" name="" id="id" size=12><br>
-        비밀번호 :
-        <input type="password" name="" id="pw" size=11><br>
-        <button class="w3-round" onclick="login();">로그인</button><button class="w3-round" onclick="cancel();">취소</button>
+
+        <input type="text" name="" id="id" placeholder="아이디" style="width: 250px;"><br>
+        <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 250px;"><br>
+
+        <button class="w3-round w3-button w3-green" style="width: 250px;" " onclick="login();">회원 로그인</button><br>
+        <button class="w3-round w3-button w3-green" style="width: 250px;" onclick="cancel();">취소</button>
     </div>
     <br><br>
     </aside>
@@ -340,11 +326,11 @@
 
     </div>
     </aside>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </article>
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
   
 
 
@@ -353,19 +339,19 @@
     <div class="w3-row">
         <div class="s4 w3-container">
             <div id="contact">
-                <h5>CONTACT Well-Being FARM</h5>
-                <ul>
-                <li>Phone : 055 9211 6591</li>
-                <li>Email : <a href="https://mail.naver.com/write"> gabi0619@naver.com</li>
-                <li>GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud</li>
-                </ul> 
+                <h5>CONTACT Well-Being FARM</h5>  &nbsp;
+                055 9211 6591 &nbsp; | &nbsp;
+                <a href="https://mail.naver.com/write"> gabi0619@naver.com  &nbsp; | &nbsp;
+                GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud &nbsp; | &nbsp;
+                address : 전주시 덕진구 농생명로 30
+                <br><br>
                 <h5>FOLLOW Well-Being FARM</h5> 
                 <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
                 <a href="https://www.instagram.com/gaviscon.kr/"><i class="fab fa-instagram" style="font-size : 30px; color : white"></i> 
                 <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065216954475_creativeid_535244992752_device_c&gclid=CjwKCAjwz5iMBhAEEiwAMEAwGHBSoJKo2p_1F9hdVDnHiB2Gvvww0W1bewOLRHn_pS9MxK-LvvBGxhoCk8gQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-google-play" style="font-size : 30px; color : white"></i> 
-                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> 
-
-            <br /><br />
+                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> &nbsp; | &nbsp;
+                클릭하시면 해당 사이트로 이동합니다.
+                <br /><br />
                 &copy; WBfarm 
         </div>
     </div>
@@ -374,3 +360,4 @@
     
 </body>
 </html>
+
