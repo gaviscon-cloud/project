@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbProduct</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+
+    let data = [["./images/cook3.jpg", "<br>요즘 코로나19로 해외 나가기도 힘들고, 웰빙팜 농민분들도 많이 힘드시리라 예상됩니다. <br><br>제 레시피가 판매에 도움이 되어 힘이 되셨으면 좋겠습니다. <br>집에서 일본을 즐길 수 있는 목살 데리야끼 덮밥 레시피, 지금 시작합니다. <br><br> 아재정육 목살 300g, 간장 3T, 설탕 1T, 맛술 1T, 물 1T를 준비합니다. <br><br>1.목살을 한입 크기로 썰어 구워줍니다. <br><br>2. 소스 재료를 모두 섞어 고기 위에 뿌려가며 구워줍니다. <br><br> 맛있게 구워진 데리야끼 목살을 밥 위에 얹고 취향껏 토핑합니다. <br><br>간단한 레시피이지만 아재정육 고기가 워낙 좋아 한끼 맛있게 먹었습니다.<br><br>", "[아재정육]<br><br>육질 좋은 목심"],
+                ["./images/cook1.jpg", "<br>없던 입맛도 되살리는 시원한 #복숭아주스만들기 오늘 드디어 소개해드리도록 할게요. 아주 간편하고 맛나요. <br><br> 복숭아 2개, 우유 200ml, 꿀 1T, 얼음을 준비해주세요. <br><br> 1. 복숭아는 깨끗하게 씻어 씨를 분리해주세요. <br><br> 2. 잘게 깍둑썰기해서 믹서기에 넣어줘요. <br><br>3. 우유와 꿀, 취향에 따라 얼음을 넣고 갈아주세요. <br><br> 그냥 먹어도 갈아먹어도 맛있는 채원농장 복숭아~~ 재구매 의사 확실해요.<br><br>", "[채원농장]<br><br>딱딱이 복숭아"],
+                ["./images/cook2.jpg", "<br>피자는 밀가루 음식이라는 편견을 버려줄 특급 레시피를 가지고 왔습니다!<br>웰빙팜에서 구매한 맛난 감자를 도우로 해서 피자를 선보여볼게요. <br><br> 준비물은 감자, 파프리카, 양파, 토마토소스, 치즈면 충분해요! <br><br>1. 모든 채소를 채를 썰어 밑간을 해주세요. <br><br>2. 감자를 먼저 볶다가 후라이팬 위에서 도우처럼 모양을 잡아 소스를 발라요. <br><br>3. 양파와 파프리카를 예쁘게 토핑하고 치즈를 뿌려주세요. 취향에 맞는 기타 재료를 추가해도 좋아요. 뚜껑을 덮어 치즈가 녹기를 기다리면 완성! <br><br> 웰빙팜 덕분에 집에서 이태리를 다녀온 기분이네요! <br><br>", "[가빈농장]<br><br>못난이 감자"]]
+
+            function tablePrint(){
+                
+                let text = '';
+                text = `<table class="w3-table-all w3-hoverable"><tr class="w3-green"><th>이미지</th><th>웰빙팜 레시피</th><th></th><th>상품</th></tr>`;
+                for(let i =0 ; i< data.length; i++){
+                    text+=`<tr><td><img src=${data[i][0]}></td><td>${data[i][1]}</td><td></td><td>${data[i][2]}</td></tr>`;
+                }  
+                text += `</table>`;
+                document.getElementById("productList").innerHTML=text;
+            }
+            function fileUpload(){
+                let a = new Array();
+                let file = "./images/" + document.getElementById("file").files[0].name;
+                let info = document.getElementById("info").value;
+                let cook = document.getElementById("cook").value;
+                a[0] = file;
+                a[1] = info;
+                a[2] = cook;
+                data.push(a);
+                console.log(data);}
+
+
+    </script>
+
+
+    <style>
+        body{width: 1080px; margin: 0px auto;}
+
+        
+  
+            *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
+
+        a{text-decoration: none;}
+        header>a>img{
+            display: block; margin: 0px auto;
+            height: 125px;}
+
+        li{list-style: none;}   
+        ul{list-style: none;} 
+        a{text-decoration: none;}
+        
+
+
+        header>h1{
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-weight: 600;}
+
+            nav>ul{
+            text-align: center;
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;}
+        
+                
+        nav>ul>div{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;}
+
+        nav>ul>li{
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 2px;}
+
+        nav>ul>li>a:hover{
+            color: white;}
+
+        #category{
+        letter-spacing: 2px;
+        font-weight: 600;}
+
+        .Product{display: flex;
+        margin-left: auto;
+        margin-bottom: 40px;}
+
+        .imghover img{
+            transition: 0.2s linear;
+        }
+        .imghover:hover img{
+            transform: scale(1.1);
+        } 
+
+        article>h3{text-align: center;
+            font-weight: 600;}
+            article>h4{text-align: center;
+            font-weight: 600;}
+
+            section>div>h3{text-align: center;
+            font-weight: 600;}
+
+        footer{
+            letter-spacing: 0px;
+        }
+
+
+        .side{
+            position: fixed; 
+            top: 295px; 
+            right: 50px; 
+
+        width: 130px;
+        padding: 15px;
+        text-align: center;
+        letter-spacing: 0px;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;}
+
+
+        .top{
+            position:fixed;
+            bottom:35px;
+            right:88px;
+        }
+
+
+
+</style>
+
+
+
+</head>
+<body class="w3-margin-top">
+    <header class="w3-container w3-margin-top">
+        <a href="index.html"><img src="./images/logo.png" alt=""></a>
+
+    </header>
+    <nav>
+        <ul class="w3-bar">
+            <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
+                <button class="w3-button">카테고리 ▼</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전체</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  제주</a>
+                    </div>
+            </div>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
+        
+    </nav>
+    <br>
+    <section>
+        <article id="category" class="w3-containger w3-margin-top">
+          <div class="w3-center w3-margin-top">
+            <button class="w3-round w3-button w3-light-grey w3-margin-bottom" style="width: 200px;"><a>이달의 레시피</a></button>
+            <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>봄의 레시피</a></button>
+            <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>여름의 레시피</a></button><br>
+            <button class="w3-round w3-button w3-green" style="width: 200px;"><a>가을의 레시피</a></button>
+            <button class="w3-round w3-button w3-green" style="width: 200px;"><a>겨울의 레시피</a></button>
+            <button class="w3-round w3-button w3-green" style="width: 200px;"><a>전국별미도감</a></button>
+          </div>
+          <br><br>
+                    
+            <h3 id="product" class="w3-margin-top w3-text-brown">[이달의 레시피 리스트]</h3><br><h4 class="w3-margin-top w3-margin-bottom w3-text-brown">웰빙팜 이용자 여러분의 비법 레시피를 공유해주세요. <br> 여러분의 참여는 농민분들께 큰 힘이 됩니다. <br><br> 웰빙팜은 참여자 여러분께 감사의 표시로 소정의 선물을 지급합니다.</h4><br>
+            <body onload="tablePrint();">
+                <section>
+                    <div id="demo" class="w3-container">
+                        <div  class="w3-margin-bottom" id="productList">
+            
+                        </div>
+                        </table>
+                    </div>
+                    <br><br>
+                    <div class="w3-container">
+                        <h3 class="w3-margin-top w3-text-brown">[이달의 레시피 등록]</h3>
+                        <div class="w3-small">
+                        이미지 : <input class="w3-input" type="file" name="" id="file"> <br>
+                        웰빙팜 레시피 : <input class="w3-input" type="text" name="" id="info"> <br>
+                        상품 : <input class="w3-input" type="text" name="" id="cook"> <br>
+                    </div>
+                        <button class= "w3-button w3-green w3-round" onclick="fileUpload();">등록</button>
+                        <button class= "w3-button w3-green w3-round" onclick="tablePrint();">리스트 추가</button>
+                  </div>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+</body>
+
+<footer class="w3-green">
+    <div class="w3-row">
+        <div class="s4 w3-container">
+            <div id="contact">
+                <h5>CONTACT Well-Being FARM</h5>  &nbsp;
+                055 9211 6591 &nbsp; | &nbsp;
+                <a href="https://mail.naver.com/write"> gabi0619@naver.com  &nbsp; | &nbsp;
+                GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud &nbsp; | &nbsp;
+                address : 전주시 덕진구 농생명로 30
+                <br><br>
+                <h5>FOLLOW Well-Being FARM</h5> 
+                <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
+                <a href="https://www.instagram.com/gaviscon.kr/"><i class="fab fa-instagram" style="font-size : 30px; color : white"></i> 
+                <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065216954475_creativeid_535244992752_device_c&gclid=CjwKCAjwz5iMBhAEEiwAMEAwGHBSoJKo2p_1F9hdVDnHiB2Gvvww0W1bewOLRHn_pS9MxK-LvvBGxhoCk8gQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-google-play" style="font-size : 30px; color : white"></i> 
+                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> &nbsp; | &nbsp;
+                클릭하시면 해당 사이트로 이동합니다.
+                <br /><br />
+                &copy; WBfarm 
+        </div>
+    </div>
+</footer>
+
+<div class="side">
+    <h5 style="line-height: 2em; font-size: 15px; font-weight: 600;">웰빙팜 회원이<br>아니신가요?</h5>
+    <p style="line-height: 2em; font-size: 13px; font-weight: 600;">지금 가입하면<br>체험농가<br>무료체험권이<br> 제공됩니다!</p> <br>
+<div>
+    <a href="register.html"><button style="font-weight: 600;" class="w3-button w3-round w3-green">가입하기</button></a>
+</div>
+
+<div class="top">
+    <a href="#"><img src="./images/top.png" width=48px height=48px></a>
+    </div>
+        
+</html>
