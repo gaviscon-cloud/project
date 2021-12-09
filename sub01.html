@@ -46,7 +46,7 @@
 
 
     <style>
-        body{width: 950px; margin: 0px auto;}
+        body{width: 1080px; margin: 0px auto;}
 
         
   
@@ -55,11 +55,13 @@
         a{text-decoration: none;}
         header>a>img{
             display: block; margin: 0px auto;
-            height: 120px;}
+            height: 125px;}
 
         li{list-style: none;}   
         ul{list-style: none;} 
         a{text-decoration: none;}
+        
+
 
         header>h1{
             text-align: center;
@@ -79,9 +81,9 @@
             font-weight: 600;}
 
         nav>ul>li{
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            letter-spacing: 1px;}
+            letter-spacing: 2px;}
 
         nav>ul>li>a:hover{
             color: white;}
@@ -103,7 +105,7 @@
 
         article>h3{text-align: center;
             font-weight: 600;}
-            article>h5{text-align: center;
+            article>h4{text-align: center;
             font-weight: 600;}
 
             section>div>h3{text-align: center;
@@ -113,12 +115,34 @@
             letter-spacing: 0px;
         }
 
+
+        .side{
+            position: fixed; 
+            top: 295px; 
+            right: 50px; 
+
+        width: 130px;
+        padding: 15px;
+        text-align: center;
+        letter-spacing: 0px;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;}
+
+
+        .top{
+            position:fixed;
+            bottom:35px;
+            right:88px;
+        }
+
+
 </style>
 
 
 
 </head>
-<body class="w3-margin-top"  onload="tablePrint(); popup();">
+<body class="w3-margin-top">
     <header class="w3-container w3-margin-top">
         <a href="index.html"><img src="./images/logo.png" alt=""></a>
 
@@ -128,33 +152,33 @@
             <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
                 <button class="w3-button">카테고리 ▼</button>
                     <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">서울</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경기</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">충청</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">전라</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경상</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">제주</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전체</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  제주</a>
                     </div>
             </div>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#product"/>이달의 특산물</a></li>
-            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#review"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
         
     </nav>
-
+    <br>
     <section>
         <article id="category" class="w3-containger w3-margin-top">
           <div class="w3-center w3-margin-top">
-            <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>서울</a></button>
+            <button class="w3-round w3-button w3-light-grey w3-margin-bottom" style="width: 200px;"><a>전체</a></button>
             <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>경기</a></button>
             <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>충청</a></button><br>
             <button class="w3-round w3-button w3-green" style="width: 200px;"><a>전라</a></button>
             <button class="w3-round w3-button w3-green" style="width: 200px;"><a>경상</a></button>
             <button class="w3-round w3-button w3-green" style="width: 200px;"><a>제주</a></button>
           </div>
-          <br>
-          <br>
+
+          <br><br><br><br>
           <div class="Product w3-containger">
             <div class="food">
                     <div class="imghover"><img style = "cursor: pointer; width :250px" src="./images/carrot.jpg" alt="신선한 당근"></div><hr style="border: solid 2px gray;">
@@ -232,7 +256,7 @@
             <br><br><br>
 
                     
-            <h3 id="product" class="w3-margin-top w3-text-brown">[이달의 특산물 리스트]</h3><br><h5 class="w3-margin-top w3-margin-bottom w3-text-brown">코로나19로 고생하시는 농민분들, 자유롭게 등록해주세요. <br> 웰빙팜은 어려운 이웃에게 힘이 되어주는 일을 기쁘게 생각합니다.</h5><br>
+            <h3 id="product" class="w3-margin-top w3-text-brown">[이달의 특산물 리스트]</h3><br><h4 class="w3-margin-top w3-margin-bottom w3-text-brown">코로나19로 고생하시는 농민분들, 자유롭게 등록해주세요. <br> 웰빙팜은 어려운 이웃에게 힘이 되어주는 일을 기쁘게 생각합니다.</h4><br>
             <body onload="tablePrint();">
                 <section>
                     <div id="demo" class="w3-container">
@@ -255,7 +279,7 @@
                         <button class= "w3-button w3-green w3-round" onclick="tablePrint();">리스트 추가</button>
                   </div>
 
-            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
      
 </body>
 
@@ -281,5 +305,15 @@
     </div>
 </footer>
 
+<div class="side">
+    <h5 style="line-height: 2em; font-size: 15px; font-weight: 600;">웰빙팜 회원이<br>아니신가요?</h5>
+    <p style="line-height: 2em; font-size: 13px; font-weight: 600;">지금 가입하면<br>체험농가<br>무료체험권이<br> 제공됩니다!</p> <br>
+<div>
+    <a href="register.html"><button style="font-weight: 600;" class="w3-button w3-round w3-green">가입하기</button></a>
+</div>
 
+<div class="top">
+    <a href="#"><img src="./images/top.png" width=48px height=48px></a>
+    </div>
+        
 </html>
