@@ -53,7 +53,7 @@
     </script>
 
     <style>
-        body{width: 950px; margin: 0px auto;}
+        body{width: 1080px; margin: 0px auto;}
 
         
         .container {
@@ -67,7 +67,7 @@
 
         header>a>img{
             display: block; margin: 0px auto;
-            height: 120px;}
+            height: 125px;}
 
         li{list-style: none;}   
         ul{list-style: none;} 
@@ -93,9 +93,9 @@
             font-weight: 600;}
 
         nav>ul>li{
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            letter-spacing: 1px;}
+            letter-spacing: 2px;}
 
         nav>ul>li>a:hover{
             color: white;}
@@ -122,6 +122,10 @@
         font-weight: 600;
         } 
 
+        aside>div>a{
+        font-size: 20px;
+        }
+
 
 
         footer{font-weight: 600;}
@@ -144,7 +148,8 @@
             cursor: pointer;
             width: 8%;}
 
-
+        
+            
         aside>div{
             margin-top: 42px;
             font-size: 17px;
@@ -156,6 +161,26 @@
         .imghover:hover img{
             transform: scale(1.1);
         } 
+
+
+        .side{
+            position: fixed; 
+            top: 295px; 
+            right: 50px; 
+
+        width: 130px;
+        padding: 15px;
+        text-align: center;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;}
+
+        .top{
+            position:fixed;
+            bottom:35px;
+            right:88px;
+        }
+
     </style>
 
 
@@ -171,46 +196,46 @@
             <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
                 <button class="w3-button">카테고리 ▼</button>
                     <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">서울</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경기</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">충청</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">전라</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">경상</a>
-                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">제주</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전체</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  제주</a>
                     </div>
             </div>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
-            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#review"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
         
     </nav>
     
     <section class="w3-left w3-container w3-margin-top w3-margin-bottom" style="width: 70%">
-        <article class="media w3-large  w3-margin-top" ></article>
-        <div class="imghover main">
-            <img style = "cursor: pointer;" width="620" height="220" src="./images/main.gif" alt="MainPhoto">
+        <article class="media w3-large  w3-margin-top w3" ></article>
+        <div>
+            <img style = "cursor: pointer;" width="710" height="245" src="./images/main.gif" alt="MainPhoto">
         </div>
         <article class="media w3-large  w3-margin-top w3-text-brown">
             <div id="hot" class="w3-row"><br>
-                <h3>[오늘의 핫딜]</h3>
+                <h3>[이달의 특산물 미리보기]</h3>
                 <div class="imghover img1">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col w3-border w3-margin-left w3-margin-right w3-margin-top" src="./images/peach.png" alt="product1" />
                 </div>
                 <div class="imghover img2">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col  w3-border w3-margin-right w3-margin-top" src="./images/onion.jpg" alt="product2" />
                 </div>
                 <div class="imghover img3">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/spinich.png" alt="product3" />
                 </div>
                 <div class="imghover img4">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col  w3-border w3-margin-left w3-margin-right w3-margin-top w3-margin-bottom" src="./images/carrot.jpg" alt="product4" />
                 </div>
                 <div class="imghover img5">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/meat.png" alt="product4" />
                 </div>
                 <div class="imghover img6">
-                <img style = "cursor: pointer; width: 188px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
+                <img style = "cursor: pointer; width: 220px;" class="w3-col  w3-border w3-margin-right w3-margin-top w3-margin-bottom" src="./images/fish.png" alt="product4" />
                 </div>
             </div>
         
@@ -224,16 +249,16 @@
                     </div>
 
                 </section>
-            </body>
+            </body><br>
             <div id="review" class="w3-row"></div>            
                 <h3 class="w3-margin-top">[이달의 베스트 후기]<img class="w3-col w3-border w3-margin-top w3-margin-bottom" src="./images/review.jpg" alt="review" /></h3>
             </div>
 
 
-            <div class="w3-row"><br>
+            <div class="w3-row"><br><br>
                 <h3 id="farm" class="w3-margin-top">[이달의 체험 농가]</h3>
                 <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm.mp4" autoplay="True" controls></video>
-                <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm2.mp4" autoplay="True" controls></video>
+                <video class="w3-col s6 w3-border w3-margin-top w3-margin-bottom" src="./images/farm2.mp4" controls></video>
             
                 <table class="w3-table-all w3-hoverable">
                     <tr class="w3-green">
@@ -264,7 +289,7 @@
                 </table>
                 <hr>
 
-            </div>
+            </div><br>
             <div class="container w3-row w3-margin-top">
                 <h3 class="item">[농촌진흥청 홍보물]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.youtube.com/embed/jYNrsS61A5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3>
                 <h3 class="item">[농촌진흥청 사이트]<iframe class="w3-col m12 w3-border w3-margin-top w3-margin-bottom" src="https://www.rda.go.kr/main/mainPage.do"></iframe></h3>
@@ -291,8 +316,9 @@
         <input type="text" name="" id="id" placeholder="아이디" style="width: 250px;"><br>
         <input type="password" name="" id="pw" placeholder="비밀번호" style="width: 250px;"><br>
 
-        <button class="w3-round w3-button w3-green" style="width: 250px;" " onclick="login();">회원 로그인</button><br>
-        <button class="w3-round w3-button w3-green" style="width: 250px;" onclick="cancel();">취소</button>
+        <button class="w3-round w3-button w3-green" style="width: 250px; font-size: 17px; " " onclick="login();">회원 로그인</button><br>
+        <button class="w3-round w3-button w3-light-grey" style="width: 250px; font-size: 17px;"><a href="register.html">신규 회원 가입</a></button><br>
+        <button class="w3-round w3-button w3-light-grey" style="width: 250px; font-size: 17px;" onclick="cancel();">취소</button>
     </div>
     <br><br>
     </aside>
@@ -307,21 +333,21 @@
                     <i class="fa fa-truck" style="font-size : 30px; color : black"></i>
         <br><br>
         <a href="myPage.html" target="_blank">
-            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">마이 페이지</a><br>
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">  마이 페이지</a><br>
         <a href="Q&A.html" target="_blank">
-            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">상품문의</a><br>
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">  상품문의</a><br>
         <a href="notice.html" target="_blank">
-            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">공지사항</a><br>    
+            <img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">  공지사항</a><br>    
 
-        <a href="https://www.rda.go.kr/subMain/minwonMain.do" target="_blank"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">커뮤니티</a><br><br>
-
+        <a href="https://www.rda.go.kr/subMain/minwonMain.do" target="_blank"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo">  커뮤니티</a><br><br>
+        <br><br>
         <aside class="right">
         <h3 id="event" class="w3-margin-top w3-text-brown">이벤트/쿠폰</h3>
         <div style = "cursor: pointer;" class="imghover banner">
-        <img class="w3-margin-bottom" width="250" height="43" src="./images/buy.jpg">
-        <img class="w3-margin-bottom" width="250" height="43" src="./images/farm.jpg">
-        <img class="w3-margin-bottom" width="250" height="43" src="./images/point.jpg">
-        <img class="w3-margin-bottom" width="250" height="43" src="./images/red food.jpg"></aside>
+        <img class="w3-margin-bottom" width="270" height="45" src="./images/buy.jpg">
+        <img class="w3-margin-bottom" width="270" height="45" src="./images/farm.jpg">
+        <img class="w3-margin-bottom" width="270" height="45" src="./images/point.jpg">
+        <img class="w3-margin-bottom" width="270" height="45" src="./images/red food.jpg"></aside>
 
     </div>
     </aside>
@@ -329,7 +355,7 @@
 
 </article>
 
-<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   
 
 
@@ -356,6 +382,17 @@
     </div>
 </footer>
 
+<div class="side">
+    <h5 style="line-height: 2em; font-size: 15px; font-weight: 600;">웰빙팜 회원이<br>아니신가요?</h5>
+    <p style="line-height: 2em; font-size: 13px; font-weight: 600;">지금 가입하면<br>체험농가<br>무료체험권이<br> 제공됩니다!</p> <br>
+<div>
+    <a href="register.html"><button style="font-weight: 600;" class="w3-button w3-round w3-green">가입하기</button></a>
+</div>
+</div>
+
+<div class="top">
+<a href="#"><img src="./images/top.png" width=48px height=48px></a>
+</div>
     
 </body>
 </html>
