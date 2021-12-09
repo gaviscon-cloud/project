@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbProduct</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="main.js"></script>
+
+
+    <style>
+        body{width: 1080px; margin: 0px auto;}
+
+        
+  
+            *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
+
+        a{text-decoration: none;}
+        header>a>img{
+            display: block; margin: 0px auto;
+            height: 125px;}
+
+        li{list-style: none;}   
+        ul{list-style: none;} 
+        a{text-decoration: none;}
+        
+
+
+        header>h1{
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-weight: 600;}
+
+            nav>ul{
+            text-align: center;
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;}
+        
+                
+        nav>ul>div{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;}
+
+        nav>ul>li{
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 2px;}
+
+        nav>ul>li>a:hover{
+            color: white;}
+
+        #category{
+        letter-spacing: 2px;
+        font-weight: 600;}
+
+        .Product{display: flex;
+        margin-left: auto;
+        margin-bottom: 40px;}
+
+        .imghover img{
+            transition: 0.2s linear;
+        }
+        .imghover:hover img{
+            transform: scale(1.1);
+        } 
+
+        article>h3{text-align: center;
+            font-weight: 600;}
+            article>h5{text-align: center;
+            font-weight: 600;}
+
+            section>div>h3{text-align: center;
+            font-weight: 600;}
+
+        footer{
+            letter-spacing: 0px;
+        }
+
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input {
+            display: inline-block;
+            width: 160px;
+        }
+</style>
+
+
+
+</head>
+<body class="w3-margin-top">
+    <header class="w3-container w3-margin-top">
+        <a href="index.html"><img src="./images/logo.png" alt=""></a>
+
+    </header>
+    
+    <nav>
+        <ul class="w3-bar">
+            <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
+                <button class="w3-button">카테고리 ▼</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전체</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  제주</a>
+                    </div>
+            </div>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
+        
+    </nav>
+    <br><br>
+    <section>
+        <p style="font-size: 20px; font-weight: 600; text-align: center;" class="w3-margin-top w3-margin-bottom w3-text-brown">웰빙팜을 처음 방문해주신 당신께,<br><br>웰빙팜은 이윤보다도 농가와 민생을 생각하는 사회적 기업입니다.<br>판매에 어려움을 겪는 농민들을 도와 여러분께 친환경적이고 저렴한 상품을 납품하고 있습니다.<br><br>누구나 건강한 농산품을 사고 팔 권리가 있습니다. <br> 저희 웰빙팜과 뜻을 함께 해주셔서 감사합니다.</p><br><br><br><br>
+        <div id="page-wrap" class="w3-center">
+            <form method="post" action="#" name="form" onsubmit="return checkAll();">
+                <fieldset>
+                    <legend style="font-size: 22px; font-weight: 600; color:#4dae50;">회원정보입력</legend>
+                    <label style="font-size: 18px; font-weight: 600;" for="userId">아이디</label>
+                    <input class="w3-margin-top w3-margin-bottom" type="text" name="userId" id="text1" />
+                    <button>중복검사</button><br />
+                    <h7 class="w3-margin-bottom" style="font-weight:600; color:#4dae50;">아이디는 영문 대소문자와 숫자 4~12자리로 입력해주세요.</h7><br>
+                    <label class="w3-margin-top" style="font-size: 17px; font-weight: 600;" for="password1">비밀번호</label>
+                    <input class="w3-margin-top; w3-margin-bottom" type="password" name="password1" /><br />
+                    <h7 class="w3-margin-bottom" style="font-weight:600; color:#4dae50;">비밀번호는 영문 대소문자와 숫자 4~12자리로 입력해주세요.</h7><br>
+                    <label class="w3-margin-top" style="font-size: 17px; font-weight: 600;" for="password2">비밀번호 확인</label>
+                    <input class="w3-margin-bottom" type="password" name="password2" /><br />
+                    <label style="font-size: 17px; font-weight: 600;" for="name">이름</label>
+                    <input class="w3-margin-bottom" type="text" name="name" /><br />
+                    <label style="font-size: 17px; font-weight: 600;" for="tel">휴대폰 번호</label>
+                    <input class="w3-margin-bottom" type="tel" name="tel" />
+                    <br />
+                    <label style="font-size: 17px; font-weight: 600;" for="email">이메일</label>
+                    <input class="w3-margin-bottom" type="email" name="email" />
+                    <br />
+                    <label style="font-size: 17px; font-weight: 600;" for="dob">생일</label>
+                    <input class="w3-margin-bottom" type="date" name="dob" />
+                    <br />
+                </fieldset>
+                <br><br><br>
+                <input type="submit" name="submit" value="제출" />
+                <input type="reset" name="reset" value="초기화" />
+            </form>
+        </div>
+            <br><br><br><br><br><br><br><br>
+     
+</body>
+
+<footer class="w3-green" style="font-weight: 600;">
+    <div class="w3-row">
+        <div class="s4 w3-container">
+            <div id="contact">
+                <h5>CONTACT Well-Being FARM</h5>  &nbsp;
+                055 9211 6591 &nbsp; | &nbsp;
+                <a href="https://mail.naver.com/write"> gabi0619@naver.com  &nbsp; | &nbsp;
+                GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud &nbsp; | &nbsp;
+                address : 전주시 덕진구 농생명로 30
+                <br><br>
+                <h5>FOLLOW Well-Being FARM</h5> 
+                <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
+                <a href="https://www.instagram.com/gaviscon.kr/"><i class="fab fa-instagram" style="font-size : 30px; color : white"></i> 
+                <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065216954475_creativeid_535244992752_device_c&gclid=CjwKCAjwz5iMBhAEEiwAMEAwGHBSoJKo2p_1F9hdVDnHiB2Gvvww0W1bewOLRHn_pS9MxK-LvvBGxhoCk8gQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-google-play" style="font-size : 30px; color : white"></i> 
+                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> &nbsp; | &nbsp;
+                클릭하시면 해당 사이트로 이동합니다.
+                <br /><br />
+                &copy; WBfarm 
+        </div>
+    </div>
+</footer>
+
+<a style="display:scroll;position:fixed;bottom:40px;right:80px;" href="#"><img src="./images/top.png" width=48px height=48px></a>
+
+
+</html>
