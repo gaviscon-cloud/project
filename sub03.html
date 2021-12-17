@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wbfarm</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <style>
+        body{width: 1080px; margin: 0px auto;}
+
+        
+  
+            *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
+
+        .top-bar{
+            text-align: right;}
+        
+        .top-bar2{
+            text-align: left;
+            margin: 0px;
+        }
+
+
+        a{text-decoration: none;}
+        header>a>img{
+            display: block; margin: 0px auto;
+            height: 125px;}
+
+        li{list-style: none;}   
+        ul{list-style: none;} 
+        a{text-decoration: none;}
+        
+
+
+        header>h1{
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 20px;
+            font-weight: 600;}
+
+            nav>ul{
+            text-align: center;
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;}
+        
+                
+        nav>ul>div{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;}
+
+        nav>ul>li{
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 2px;}
+
+        nav>ul>li>a:hover{
+            color: white;}
+
+        #category{
+        letter-spacing: 2px;
+        font-weight: 600;}
+
+        .Product{display: flex;
+        margin-left: auto;
+        margin-bottom: 40px;}
+
+        .imghover img{
+            transition: 0.2s linear;
+        }
+        .imghover:hover img{
+            transform: scale(1.05);
+        } 
+
+        article>h3{text-align: center;
+            font-weight: 600;}
+            article>h4{text-align: center;
+            font-weight: 600;}
+
+            section>div>h3{text-align: center;
+            font-weight: 600;}
+
+            section>div>h4{text-align: center;
+            font-weight: 600;}
+
+        footer{
+            letter-spacing: 0px;
+        }
+
+        #video{
+            text-align:center;
+            margin:auto;
+            margin-bottom: 35px;
+            padding: 20px;
+            border-style: solid;
+            border-color: lightgray;
+            border-width: 2px;
+            border-radius: 10px;
+        }
+
+        .side{
+            position: fixed; 
+            top: 295px; 
+            right: 50px; 
+
+        width: 130px;
+        padding: 15px;
+        text-align: center;
+        letter-spacing: 0px;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;}
+
+
+        .top{
+            position:fixed;
+            bottom:35px;
+            right:50px;
+        }
+
+        .dark{
+            position:fixed;
+            bottom:35px;
+            right: 90px;
+            background-color: #B8BCC4;
+            border-radius: 5px;
+        }
+        
+
+</style>
+
+
+
+</head>
+<body class="w3-margin-top">
+    <div class="top-bar" style="float: right;">
+        <a href="#login" style="font-weight: 600; font-size: 13px; color: #4dae50;">로그인  </a>
+        <a href="shopping.html" style="font-weight: 600; font-size: 13px; color: gray;">| 장바구니 |</a>
+        <a href="https://www.cjlogistics.com/ko/tool/parcel/tracking" style="font-weight: 600; font-size: 13px; color: gray;">배송조회 |</a>
+        <a href="https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionality.do?menu_grp=MENU_NEW01&menu_no=2657" style="font-weight: 600; font-size: 13px; color: gray;">고객센터 </a>
+        </div>
+        <div class="top-bar2">
+        <button style="font-size: 13px;" class="w3-button w3-round w3-light-grey">웰빙팜 소식 보러가기 ></button>
+        </div>
+    <header class="w3-container">
+        <a href="index.html"><img src="./images/logo.png" alt=""></a>
+
+    </header>
+    <nav>
+        <ul class="w3-bar">
+            <div class="w3-bar-item w3-dropdown-hover w3-green w3-round">
+                <button class="w3-button">카테고리 ▼</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전체</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경기</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  충청</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  전라</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  경상</a>
+                    <a href="#" class="w3-bar-item w3-button"><img width="19" height="18" src="./images/korea.png" alt="korea">  제주</a>
+                    </div>
+            </div>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub03.html"/>체험 농가</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub04.html"/>이벤트/쿠폰</a></li>
+        
+    </nav>
+    <br>
+    <section>
+        <article id="category" class="w3-containger w3-margin-top">
+          <div class="w3-center w3-margin-top">
+            <button class="w3-round w3-button w3-light-grey w3-margin-bottom" style="width: 200px;"><a>개인</a></button>
+            <button class="w3-round w3-button w3-green w3-margin-bottom" style="width: 200px;"><a>단체</a></button>
+
+          </div>
+          <br><br>
+                    
+          <h3 id="product" class="w3-margin-top w3-text-brown">[체험 농가]</h3><br><p style="font-size: 20px; font-weight: 600; text-align: center;" class="w3-margin-top w3-margin-bottom w3-text-brown">농민분들의 수익 창출을 돕기 위한 체험 기획,<br>웰빙팜은 농민분들의 수입원을 늘리고자 항상 고민해왔습니다.<br><br>웰빙팜이 농민분들과 적극 소통하여 기획한 체험들을 즐겨보세요. <br><br></p>
+
+          <body>
+                <section style="text-align: center;">
+
+                    <div id="video">
+                    <h3 class="w3-margin-top">화성 행복텃밭</h3><br>
+                    <iframe width="780" height="490" src="https://www.youtube.com/embed/v4aSSA8SHwU" title="farm" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4 class="w3-margin-top w3-text-brown">개인 : 평일 11AM - 6PM  주말 11AM - 8PM <br><br> 사전 준비물 : 웰빙팜 예약내역 / 모종삽</h4><br>
+                    <button onclick="confirm('체험을 예약하겠습니까?')" style="font-weight:600;" class = "w3-button w3-green w3-round w3-margin-bottom">지금 예약하기</button>
+                    </div>
+
+                    <div id="video">
+                    <h3 class="w3-margin-top">우유체험 미르목장</h3><br>
+                    <iframe width="780" height="490" src="https://www.youtube.com/embed/U_t2hVuNIfA" title="YouTube video player" title="farm" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4 class="w3-margin-top w3-text-brown">개인 : 평일 1PM - 6PM  주말 10AM - 6PM <br><br> 사전 준비물 : 웰빙팜 예약내역 </h4><br>
+                    <button onclick="confirm('체험을 예약하겠습니까?')" style="font-weight:600;" class = "w3-button w3-green w3-round w3-margin-bottom">지금 예약하기</button>
+                    </div>
+
+                    <div id="video">
+                    <h3 class="w3-margin-top">담양 커피농장</h3><br>
+                    <iframe width="780" height="490" src="https://www.youtube.com/embed/hOp5ZHMQvT4" title="YouTube video player" title="farm" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4 class="w3-margin-top w3-text-brown">개인 : 주말 10AM - 8PM <br><br> 사전 준비물 : 웰빙팜 예약내역 / 개인 포대자루(증정 커피콩을 담아갈 것)</h4><br>
+                    <button onclick="confirm('체험을 예약하겠습니까?')" style="font-weight:600;" class = "w3-button w3-green w3-round w3-margin-bottom">지금 예약하기</button>
+                    </div>
+
+
+                </section>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+</body>
+
+<footer class="w3-green">
+    <div class="w3-row">
+        <div class="s4 w3-container">
+            <div id="contact">
+                <h5>CONTACT Well-Being FARM</h5>  &nbsp;
+                055 9211 6591 &nbsp; | &nbsp;
+                <a href="https://mail.naver.com/write"> gabi0619@naver.com  &nbsp; | &nbsp;
+                GitHub : <a href="https://github.com/gaviscon-cloud"> gaviscon-cloud &nbsp; | &nbsp;
+                address : 전주시 덕진구 농생명로 30
+                <br><br>
+                <h5>FOLLOW Well-Being FARM</h5> 
+                <script src="https://kit.fontawesome.com/55e36501ea.js" crossorigin="anonymous"></script>
+                <a href="https://www.instagram.com/gaviscon.kr/"><i class="fab fa-instagram" style="font-size : 30px; color : white"></i> 
+                <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-kr-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065216954475_creativeid_535244992752_device_c&gclid=CjwKCAjwz5iMBhAEEiwAMEAwGHBSoJKo2p_1F9hdVDnHiB2Gvvww0W1bewOLRHn_pS9MxK-LvvBGxhoCk8gQAvD_BwE&gclsrc=aw.ds"><i class="fab fa-google-play" style="font-size : 30px; color : white"></i> 
+                <a href="https://ko-kr.facebook.com/"><i class="fab fa-facebook-square" style="font-size : 30px; color : white"></i> &nbsp; | &nbsp;
+                클릭하시면 해당 사이트로 이동합니다.
+                <br /><br />
+                &copy; WBfarm 
+        </div>
+    </div>
+</footer>
+
+<div class="side">
+    <h5 style="line-height: 2em; font-size: 15px; font-weight: 600;">웰빙팜 회원이<br>아니신가요?</h5>
+    <p style="line-height: 2em; font-size: 13px; font-weight: 600;">지금 가입하면<br>체험농가<br>무료체험권이<br> 제공됩니다!</p> <br>
+<div>
+    <a href="register.html"><button style="font-weight: 600;" class="w3-button w3-round w3-green">가입하기</button></a>
+</div>
+
+<div class="top">
+    <a href="#"><img src="./images/top.png" width=34px height=34px></a>
+    </div>
+    <script>
+        function setDisplayAppreance(self){
+            var body = document.querySelector('body'); 
+            var btn = document.getElementById('btnDisplayMode'); 
+            if(self.value === '야간모드'){ 
+              body.style.backgroundColor = 'lightgray';
+              self.value = '오전모드';
+            } else { 
+              body.style.backgroundColor = 'white';
+              self.value = '야간모드';
+            }
+          }
+        </script>
+    <div class="dark">
+        <input class="w3-button w3-round" style="color: white; font-weight: 550; width:90px;" id="btnDisplayMode" c value="야간모드" onclick="setDisplayAppreance(this);">
+        </div>
+        
+    </body>
+    </html>
+    
+    
