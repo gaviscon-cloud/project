@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wbProduct</title>
+    <title>wbfarm</title>
     <link rel="stylesheet" href="./css/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,6 +17,15 @@
         
   
             *{font-family: "맑은 고딕" verdana, Arial, Helvetica, sans-serif; line-height: 120%;}
+
+        .top-bar{
+            text-align: right;}
+        
+        .top-bar2{
+            text-align: left;
+            margin: 0px;
+        }
+
 
         a{text-decoration: none;}
         header>a>img{
@@ -91,13 +100,36 @@
             display: inline-block;
             width: 160px;
         }
+
+        .top{
+            position:fixed;
+            bottom:35px;
+            right:50px;
+        }
+
+        .dark{
+            position:fixed;
+            bottom:35px;
+            right: 90px;
+            background-color: #B8BCC4;
+            border-radius: 5px;
+        }
 </style>
 
 
 
 </head>
 <body class="w3-margin-top">
-    <header class="w3-container w3-margin-top">
+    <div class="top-bar" style="float: right;">
+        <a href="#login" style="font-weight: 600; font-size: 13px; color: #4dae50;">로그인  </a>
+        <a href="shopping.html" style="font-weight: 600; font-size: 13px; color: gray;">| 장바구니 |</a>
+        <a href="https://www.cjlogistics.com/ko/tool/parcel/tracking" style="font-weight: 600; font-size: 13px; color: gray;">배송조회 |</a>
+        <a href="https://www.foodsafetykorea.go.kr/portal/healthyfoodlife/functionality.do?menu_grp=MENU_NEW01&menu_no=2657" style="font-weight: 600; font-size: 13px; color: gray;">고객센터 </a>
+        </div>
+        <div class="top-bar2">
+        <button style="font-size: 13px;" class="w3-button w3-round w3-light-grey">웰빙팜 소식 보러가기 ></button>
+        </div>
+    <header class="w3-container">
         <a href="index.html"><img src="./images/logo.png" alt=""></a>
 
     </header>
@@ -117,8 +149,8 @@
             </div>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub01.html"/>이달의 특산물</a></li>
             <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub02.html"/>이달의 레시피</a></li>
-            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#farm"/>체험 농가</a></li>
-            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="#event"/>이벤트/쿠폰</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub03.html"/>체험 농가</a></li>
+            <li class="w3-bar-item w3-button w3-padding-large"><img width="22" height="20" src="./images/mini_logo.png" alt="mini logo"><a href="sub04.html"/>이벤트/쿠폰</a></li>
         
     </nav>
     <br><br>
@@ -180,7 +212,28 @@
     </div>
 </footer>
 
-<a style="display:scroll;position:fixed;bottom:40px;right:80px;" href="#"><img src="./images/top.png" width=48px height=48px></a>
-
-
+<div class="top">
+    <a href="#"><img src="./images/top.png" width=34px height=34px></a>
+    </div>
+    <script>
+        function setDisplayAppreance(self){
+            var body = document.querySelector('body'); 
+            var btn = document.getElementById('btnDisplayMode'); 
+            if(self.value === '야간모드'){ 
+              body.style.backgroundColor = 'lightgray';
+              self.value = '오전모드';
+            } else { 
+              body.style.backgroundColor = 'white';
+              self.value = '야간모드';
+            }
+          }
+        </script>
+    <div class="dark">
+        <input class="w3-button w3-round" style="color: white; font-weight: 550; width:90px;" id="btnDisplayMode" c value="야간모드" onclick="setDisplayAppreance(this);">
+        </div>
+        
+    </body>
+    </html>
+    
+    
 </html>
